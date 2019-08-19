@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NYTimes Seach</string>
+    <string name="refresh_cap">Refresh</string>
+    <string name="error_message">something went wrong ...</string>
+    <string name="error_message_empty_result">There is no result for this query!</string>
+    <string name="hint_search">Search Articles</string>
+    <string name="share">Share</string>
+
+</resources>
