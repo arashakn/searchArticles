@@ -3,10 +3,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
+        android:background="@color/color_white"
         android:orientation="vertical"
-        android:padding="20dip"
->
+        android:padding="20dip">
 
         <ImageButton
                 android:id="@+id/btn_share"
@@ -16,32 +15,26 @@
                 android:text="@string/share"
                 android:layout_gravity="right"
                 android:src="@drawable/ic_share"
-                android:background="@null"
-        />
+                android:background="@null"/>
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_title"
                 android:layout_gravity="center_horizontal"
-                style="@style/textSmallBold"
-        />
+                style="@style/textSmallBold"/>
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_snippet"
-                android:layout_marginTop="20dip"
-        />
+                android:layout_marginTop="20dip"/>
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_lead_paragraph"
                 android:layout_marginTop="20dip"
-
         />
-
-
 
 </LinearLayout>

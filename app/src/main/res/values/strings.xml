@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NYTimes Seach</string>
+    <string name="app_name">NYTimes Search</string>
     <string name="refresh_cap">Refresh</string>
     <string name="error_message">something went wrong ...</string>
     <string name="error_message_empty_result">There is no result for this query!</string>

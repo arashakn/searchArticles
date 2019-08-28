@@ -14,15 +14,12 @@ import java.util.concurrent.TimeUnit
 
 object ArticlesAPIClient {
 
-
     const val BASE_URL = "https://api.nytimes.com"
     const val BASE_IMAGE_URL ="https://www.nytimes.com/"
     const val API_KEY = "d31fe793adf546658bd67e2b6a7fd11a"
     const val cacheSize = (5 * 1024 * 1024).toLong()
     var myCache = Cache(AppApplication.applicationContext().cacheDir, cacheSize)
-
     private val articlesAPI : ArticlesAPI
-
 
     init {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
@@ -61,5 +58,4 @@ object ArticlesAPIClient {
             isConnected = true
         return isConnected
     }
-
 }

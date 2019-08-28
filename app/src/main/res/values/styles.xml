@@ -10,17 +10,17 @@
 
     <style name="textLarge" parent="android:TextAppearance">
         <item name="android:textSize">30sp</item>
-        <item name="android:color">@color/colorWhite</item>
+        <item name="android:color">@color/color_white</item>
     </style>
 
     <style name="textMedium" parent="android:TextAppearance">
         <item name="android:textSize">20sp</item>
-        <item name="android:color">@color/colorWhite</item>
+        <item name="android:color">@color/color_white</item>
     </style>
 
     <style name="textSmallBold" parent="android:TextAppearance">
         <item name="android:textSize">12sp</item>
-        <item name="android:color">@color/colorWhite</item>
+        <item name="android:color">@color/color_white</item>
         <item name="android:textStyle">bold</item>
     </style>
 

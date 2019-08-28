@@ -1,6 +1,5 @@
 package com.myfitnesspal.nytimesseach.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,6 +33,7 @@ class ArticleAdapter(val articles : ArrayList<Article> = ArrayList<Article>(), v
             val article = articles[position]
             view.setOnClickListener { onclick.onArticleClick(articles[adapterPosition]) }
             view.tv_title.text = article.headline.main
+            view.iv_article.setImageDrawable(null)
             val multimedia = article.multimedia.filter { it.subtype.equals("thumbnail") }.firstOrNull()
             multimedia?.url?.let {
                 val imageURL = ArticlesAPIClient.BASE_IMAGE_URL +"/" +it
@@ -45,7 +45,7 @@ class ArticleAdapter(val articles : ArrayList<Article> = ArrayList<Article>(), v
             }
         }
     }
-     interface OnArticleClickListener {
-         fun onArticleClick(article : Article)
-     }
+    interface OnArticleClickListener {
+        fun onArticleClick(article : Article)
+    }
 }

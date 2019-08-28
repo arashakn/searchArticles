@@ -49,8 +49,6 @@ class ArticlesListFragment : Fragment(), ArticleAdapter.OnArticleClickListener{
         observeViewModel()
     }
 
-
-
     private  fun observeViewModel(){
         articlesViewModel.articlesList.observe(this, Observer {
             it?.let {

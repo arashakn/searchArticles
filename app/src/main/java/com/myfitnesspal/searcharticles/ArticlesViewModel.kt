@@ -18,11 +18,9 @@ class ArticlesViewModel : ViewModel() {
     private val compositeDisposable  = CompositeDisposable ()
 
     fun fetchArticles(q : String ){
-
         if(q.length<2){
             return
         }
-
         error.value = false
         progress.value = true
 

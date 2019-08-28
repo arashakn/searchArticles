@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.article_details_view.*
 import kotlinx.android.synthetic.main.article_list_item.tv_title
 
-
 class ArticleDetailsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
