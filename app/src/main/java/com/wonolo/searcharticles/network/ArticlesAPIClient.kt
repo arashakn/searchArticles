@@ -1,9 +1,9 @@
-package com.myfitnesspal.nytimesseach.network
+package com.wonolo.nytimesseach.network
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
-import com.myfitnesspal.searcharticles.AppApplication
+import com.wonolo.searcharticles.AppApplication
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

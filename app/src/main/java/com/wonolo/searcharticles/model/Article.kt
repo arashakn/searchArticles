@@ -1,4 +1,4 @@
-package com.myfitnesspal.nytimesseach.model
+package com.wonolo.nytimesseach.model
 
 data class Article (val web_url : String, val snippet : String, val lead_paragraph :String , val abstract : String , val headline: Headline , val multimedia : ArrayList<Multimedia>)
 

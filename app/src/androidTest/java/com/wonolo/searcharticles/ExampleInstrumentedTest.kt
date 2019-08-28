@@ -1,4 +1,4 @@
-package com.myfitnesspal.searcharticles
+package com.wonolo.searcharticles
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

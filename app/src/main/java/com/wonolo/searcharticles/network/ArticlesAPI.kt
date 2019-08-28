@@ -1,6 +1,6 @@
-package com.myfitnesspal.nytimesseach.network
+package com.wonolo.nytimesseach.network
 
-import com.myfitnesspal.nytimesseach.model.Articles
+import com.wonolo.nytimesseach.model.Articles
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

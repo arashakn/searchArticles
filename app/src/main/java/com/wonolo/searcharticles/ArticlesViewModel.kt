@@ -1,10 +1,10 @@
-package com.myfitnesspal.searcharticles
+package com.wonolo.searcharticles
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.myfitnesspal.nytimesseach.model.Article
-import com.myfitnesspal.nytimesseach.model.Articles
-import com.myfitnesspal.nytimesseach.network.ArticlesAPIClient
+import com.wonolo.nytimesseach.model.Article
+import com.wonolo.nytimesseach.model.Articles
+import com.wonolo.nytimesseach.network.ArticlesAPIClient
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver

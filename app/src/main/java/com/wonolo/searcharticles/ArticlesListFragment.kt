@@ -1,4 +1,4 @@
-package com.myfitnesspal.searcharticles
+package com.wonolo.searcharticles
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.myfitnesspal.nytimesseach.adapter.ArticleAdapter
-import com.myfitnesspal.nytimesseach.model.Article
+import com.wonolo.nytimesseach.adapter.ArticleAdapter
+import com.wonolo.nytimesseach.model.Article
 import kotlinx.android.synthetic.main.articles_list.*
 
 class ArticlesListFragment : Fragment(), ArticleAdapter.OnArticleClickListener{

@@ -1,12 +1,12 @@
-package com.myfitnesspal.nytimesseach.adapter
+package com.wonolo.nytimesseach.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.myfitnesspal.nytimesseach.model.Article
-import com.myfitnesspal.nytimesseach.network.ArticlesAPIClient
-import com.myfitnesspal.searcharticles.R
+import com.wonolo.nytimesseach.model.Article
+import com.wonolo.nytimesseach.network.ArticlesAPIClient
+import com.wonolo.searcharticles.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.article_list_item.view.*
 

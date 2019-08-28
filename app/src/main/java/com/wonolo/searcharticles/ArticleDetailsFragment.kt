@@ -1,4 +1,4 @@
-package com.myfitnesspal.searcharticles
+package com.wonolo.searcharticles
 
 import android.os.Bundle
 import android.view.LayoutInflater

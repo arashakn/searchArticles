@@ -1,8 +1,8 @@
-package com.myfitnesspal.searcharticles
+package com.wonolo.searcharticles
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.myfitnesspal.nytimesseach.model.Article
+import com.wonolo.nytimesseach.model.Article
 
 class SelectedArticleViewModel : ViewModel() {
     val selectedArticle = MutableLiveData<Article>()

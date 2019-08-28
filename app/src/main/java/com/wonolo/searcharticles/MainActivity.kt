@@ -1,4 +1,4 @@
-package com.myfitnesspal.searcharticles
+package com.wonolo.searcharticles
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
