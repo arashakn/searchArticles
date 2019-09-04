@@ -61,7 +61,8 @@ class ArticlesListFragment : Fragment(), ArticleAdapter.OnArticleClickListener{
                 else{
                     rv_articles.visibility = View.VISIBLE
                     tv_error.visibility = View.GONE
-                    articleAdapter.addArticles(it)
+
+                    articleAdapter.submitList(it)
                 }
 
             } ?:run{
