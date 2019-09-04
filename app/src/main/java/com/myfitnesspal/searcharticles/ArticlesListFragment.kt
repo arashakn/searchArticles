@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.myfitnesspal.nytimesseach.adapter.ArticleAdapter
 import com.myfitnesspal.nytimesseach.model.Article
 import kotlinx.android.synthetic.main.articles_list.*
@@ -18,7 +19,7 @@ class ArticlesListFragment : Fragment(), ArticleAdapter.OnArticleClickListener{
 
     private lateinit var articleAdapter : ArticleAdapter
     lateinit var articlesViewModel: ArticlesViewModel
-
+    lateinit var linearLayoutManager : LinearLayoutManager
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.articles_list,container,false)
         return  view
@@ -28,7 +29,7 @@ class ArticlesListFragment : Fragment(), ArticleAdapter.OnArticleClickListener{
         articlesViewModel = ViewModelProviders.of(this).get(ArticlesViewModel::class.java)
         articleAdapter = ArticleAdapter(onArticleClickListener = this)
         rv_articles.adapter = articleAdapter
-        val linearLayoutManager = LinearLayoutManager(context)
+        linearLayoutManager = LinearLayoutManager(context)
         rv_articles.layoutManager = linearLayoutManager
         val dividerItemDecoration = DividerItemDecoration(context,linearLayoutManager.getOrientation())
         rv_articles.addItemDecoration(dividerItemDecoration)
@@ -45,9 +46,14 @@ class ArticlesListFragment : Fragment(), ArticleAdapter.OnArticleClickListener{
                 return false
             }
         })
-
         observeViewModel()
+
+        //setRecyclerViewScrollListener()
+
     }
+    private val lastVisibleItemPosition: Int
+        get() = linearLayoutManager.findLastVisibleItemPosition()
+
 
     private  fun observeViewModel(){
         articlesViewModel.articlesList.observe(this, Observer {
@@ -96,6 +102,8 @@ class ArticlesListFragment : Fragment(), ArticleAdapter.OnArticleClickListener{
                 false -> progress_circular.visibility = View.GONE
             }
         })
+
+
     }
 
     override fun onDestroy() {
@@ -113,5 +121,21 @@ class ArticlesListFragment : Fragment(), ArticleAdapter.OnArticleClickListener{
                 .addToBackStack(null)
                 .commit()
         }
+    }
+
+
+    private fun setRecyclerViewScrollListener() {
+        rv_articles.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                val totalItemCount = recyclerView.layoutManager!!.itemCount
+                println("$totalItemCount -> +$lastVisibleItemPosition")
+                if(totalItemCount == lastVisibleItemPosition+1 ){
+                    if(articlesViewModel.progress.value !=null && articlesViewModel.progress.value != true ) {
+                        articlesViewModel.fetchMoreArticles("1")
+                    }
+                }
+            }
+        })
     }
 }
